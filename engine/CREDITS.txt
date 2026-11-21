@@ -1,0 +1,40 @@
+Little Parables: the voice engine
+
+Voice engine: Pocket TTS by Kyutai (CC BY 4.0), ONNX export by KevinAHM; one model file modified.
+
+What is in this folder, and where it came from
+
+model/
+  Kyutai Pocket TTS, bundle english_2026-04 (https://huggingface.co/kyutai/pocket-tts), as the int8 ONNX export
+  by KevinAHM (https://huggingface.co/KevinAHM/pocket-tts-onnx). Licence: Creative Commons Attribution 4.0,
+  see licenses/CC-BY-4.0-model.txt.
+  MODIFIED FILE: model/flow_lm_main_int8_dyn.onnx was made from KevinAHM's flow_lm_main_int8.onnx. The only change
+  is that the declared length of the attention cache (1000) became a free size on the graph's inputs and outputs.
+  No weight was touched. The script that made it is tools/make-dyn-model.py in the project.
+  The other model files are unchanged.
+
+storyteller.voice
+  The built-in storyteller voice in the form the engine keeps a voice: what the model's encoder heard in a
+  made-up sample voice. Made for Little Parables with the model above; nobody's real voice.
+
+worker.js
+  Written for Little Parables. Its model code is derived from inference-worker.js in KevinAHM/pocket-tts-web
+  (https://huggingface.co/spaces/KevinAHM/pocket-tts-web). Licence: Apache License 2.0, see licenses/Apache-2.0.txt.
+  Changes: the voice sample is encoded in three-second pieces, the attention cache grows as needed, silences are
+  tidied, and the files are kept on the device.
+
+sentencepiece.js
+  The SentencePiece tokenizer built for the browser, taken from KevinAHM/pocket-tts-web. SentencePiece is by
+  Google, Apache License 2.0 (licenses/Apache-2.0.txt).
+  MODIFIED FILE: three tokenizer models that were built into the file and are not used here were removed.
+
+ort/
+  ONNX Runtime Web 1.18.0 by Microsoft (https://github.com/microsoft/onnxruntime), files ort.wasm.min.mjs
+  (dist/esm/ort.wasm.min.js in the npm package) and ort-wasm-simd.wasm, unchanged. Licence: MIT, see
+  licenses/MIT-onnxruntime.txt.
+
+Kyutai's terms for this model
+
+  A voice may be copied only with the clear consent of the person whose voice it is, and speech made with it must
+  not be passed off as a real recording. Little Parables asks the reader to confirm it is their own voice before
+  it is copied, and the copy never leaves their device.
