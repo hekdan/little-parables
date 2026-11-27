@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Parables: privacy and help</title>
+<meta name="description" content="What the Little Parables app keeps on your device, what it sends, and how to get help.">
+<link rel="icon" href="apple-touch-icon.png">
+<style>
+  :root { --bg: #faf5ea; --card: #fffdf8; --ink: #1f2547; --soft: #4d5578; --blue: #283a86; --line: #e9dfcb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14182b; --card: #1c2238; --ink: #f2eee4; --soft: #c3c6d6; --blue: #a9b8ff; --line: #2e3553; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Verdana, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 32px 16px 56px; }
+  h1, h2 { font-family: Georgia, "Times New Roman", serif; color: var(--blue); line-height: 1.2; }
+  h1 { font-size: 30px; margin: 0 0 4px; }
+  h2 { font-size: 22px; margin: 32px 0 8px; }
+  .date { color: var(--soft); margin: 0 0 20px; font-size: 15px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 4px 20px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--blue); }
+  small { color: var(--soft); }
+</style>
+</head>
+<body>
+<main>
+<h1>Little Parables</h1>
+<p class="date">Privacy and help. Updated November 25, 2026.</p>
+
+<div class="card">
+<h2>The short version</h2>
+<ul>
+  <li>No accounts, no ads, no tracking and no analytics.</li>
+  <li>Your family's names, your saved stories and your voice stay on your iPhone or iPad.</li>
+  <li>To write a new story, the app sends your story idea to a free story-writing service on the internet. Real names are swapped for made-up ones before anything is sent.</li>
+</ul>
+</div>
+
+<h2>What stays on your device</h2>
+<ul>
+  <li>The family list: names, ages, and the animal each person becomes.</li>
+  <li>The stories you make and keep.</li>
+  <li>Voice copies. With "Read in my own voice", the app records five short lines with the microphone, makes a copy of that voice on the device, and keeps it there. The recording and the voice copy are never sent anywhere. The microphone is used only while you record, and only after you allow it.</li>
+</ul>
+<p>You can delete a story or a voice in the app. Deleting the app removes everything it kept.</p>
+
+<h2>What is sent, and to whom</h2>
+<ul>
+  <li><b>Writing a new story.</b> When you tap Make the story, the app sends a request to a free AI story writer: OVHcloud AI Endpoints or, when that one cannot be reached or is full, ch.at; when neither of those can write it, our own small story writer, which runs on Cloudflare Workers AI. The request holds the idea you typed, the kind of story (any story or a Bible story) and, for family stories, a made-up stand-in name for each person with their age, girl or boy, the animal they become, and role words such as "Mom" or "Grandma". Real names from your family list never leave the device: they are swapped back in when the story arrives. No account, device ID or contact details are sent. These services are run by other companies under their own terms. Our own writer keeps no copy of the request or the story. To keep it free for everyone, it counts how many stories each internet address asks for in a day, under a scrambled code that is deleted after a day, never the address itself. Please don't type addresses or other private details into the idea box.</li>
+  <li><b>Bible verses.</b> For a Bible story, the app gets the verse text from bible.helloao.org or bible-api.com. Only the verse reference is sent, for example "Luke 15:4".</li>
+  <li><b>Fonts.</b> The app loads its two typefaces from Google Fonts. Google receives the usual details of a web request, such as your IP address, but nothing about you or your stories.</li>
+  <li><b>Links you tap.</b> "Read" under a Bible story opens BibleGateway in Safari. Sharing a story makes a link to hekdan.github.io: the story travels inside the link itself and is not stored on a server. Anyone who has the link can read that story.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Little Parables is made for parents and grandparents to use with their children. It does not knowingly collect personal information from children. Children's real names stay on the device. Copy only your own voice: the app asks you to confirm that it is your voice before it is copied.</p>
+
+<h2 id="help">Help</h2>
+<p>Questions, problems or ideas? Open an issue at <a href="https://github.com/hekdan/little-parables/issues">github.com/hekdan/little-parables/issues</a>. Issues there are public, so please leave out children's names and other private details.</p>
+
+<h2>Credits</h2>
+<p><small>Voice engine: Pocket TTS by Kyutai (CC BY 4.0), with the ONNX export by KevinAHM (CC BY 4.0, one model file modified) and code derived from KevinAHM's pocket-tts-web (Apache 2.0). SentencePiece by Google (Apache 2.0). ONNX Runtime Web by Microsoft (MIT). Scripture from the Berean Standard Bible (BSB) and the World English Bible (WEB), both public domain.</small></p>
+
+<p><small>If this page changes, the date at the top changes too.</small></p>
+</main>
+</body>
+</html>

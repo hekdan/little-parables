@@ -1,0 +1,90 @@
+{
+ "v": 1,
+ "note": "Little Parables story writers, read by the app at start (src/writer.js, remoteList). Built from src/writer.js by build.mjs --site.",
+ "writers": [
+  {
+   "id": "qwen",
+   "model": "Qwen3.5-397B-A17B",
+   "body": {
+    "reasoning_effort": "none",
+    "max_tokens": 4500,
+    "temperature": 0.8,
+    "response_format": {
+     "type": "json_object"
+    }
+   },
+   "firstText": 8,
+   "minChars": 500,
+   "minCharsBy": 12,
+   "silence": 10
+  },
+  {
+   "id": "gpt-oss",
+   "model": "gpt-oss-120b",
+   "body": {
+    "reasoning_effort": "low",
+    "max_tokens": 6000,
+    "temperature": 0.8,
+    "response_format": {
+     "type": "json_object"
+    }
+   },
+   "firstText": 20,
+   "silence": 12,
+   "limit": 40
+  },
+  {
+   "id": "mistral",
+   "model": "Mistral-Small-3.2-24B-Instruct-2506",
+   "body": {
+    "max_tokens": 4500,
+    "temperature": 0.8,
+    "response_format": {
+     "type": "json_object"
+    }
+   },
+   "silence": 15,
+   "limit": 45
+  },
+  {
+   "id": "chat",
+   "elsewhere": true,
+   "url": "https://ch.at/v1/chat/completions",
+   "model": "gpt-4o",
+   "body": {
+    "max_tokens": 4500,
+    "temperature": 0.8
+   },
+   "limit": 15
+  },
+  {
+   "id": "cf-gemma",
+   "last": true,
+   "url": "https://little-parables-writer.cloud-dx-cf.workers.dev/v1/chat/completions",
+   "model": "gemma-4",
+   "body": {
+    "max_tokens": 4500,
+    "temperature": 0.8,
+    "response_format": {
+     "type": "json_object"
+    }
+   },
+   "firstText": 20,
+   "silence": 15,
+   "limit": 75
+  },
+  {
+   "id": "cf-mistral",
+   "last": true,
+   "url": "https://little-parables-writer.cloud-dx-cf.workers.dev/v1/chat/completions",
+   "model": "mistral-small",
+   "body": {
+    "max_tokens": 4500,
+    "temperature": 0.8
+   },
+   "firstText": 25,
+   "silence": 15,
+   "limit": 75
+  }
+ ]
+}

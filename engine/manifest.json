@@ -1,0 +1,66 @@
+{
+ "version": "483aa7d575b84be9",
+ "bytes": 158187830,
+ "files": [
+  {
+   "path": "model/bos_before_voice.npy",
+   "size": 4224,
+   "sha256": "f46edf4f7007b7ba4ea58831f49d003e59e167b4641c44bb3addfe9231a780b1"
+  },
+  {
+   "path": "model/bundle.json",
+   "size": 24381,
+   "sha256": "bab643150f437f37df080a710520ff39ed9ebd9a339f8ebdc739f7eddfc28b3f"
+  },
+  {
+   "path": "model/tokenizer.model",
+   "size": 59339,
+   "sha256": "d461765ae179566678c93091c5fa6f2984c31bbe990bf1aa62d92c64d91bc3f6"
+  },
+  {
+   "path": "ort/ort.wasm.min.mjs",
+   "size": 142864,
+   "sha256": "d02079ae1c4143f3a555a1dff86ba523b92022d8fe519263a34cf88675738753"
+  },
+  {
+   "path": "storyteller.voice",
+   "size": 606224,
+   "sha256": "db1c81f8d3e006df67f909c33f4863a43f27e08a8859821f1ccfb8a3ba882fcf"
+  },
+  {
+   "path": "sentencepiece.js",
+   "size": 761482,
+   "sha256": "55e97905cfaf188f52c5dd30136235126b8ae9ca986c4810f27c17766c562118"
+  },
+  {
+   "path": "model/flow_lm_flow_int8.onnx",
+   "size": 9962530,
+   "sha256": "3dd781ee5abee9e195320bf0106bebd6372a852b3b36352524ee78b40554635d"
+  },
+  {
+   "path": "ort/ort-wasm-simd.wasm",
+   "size": 10595041,
+   "sha256": "f533b5f21790563d7556c611c3835ac65848ee326da2689aac54ed7d9cc8c6a4"
+  },
+  {
+   "path": "model/text_conditioner_int8.onnx",
+   "size": 16388384,
+   "sha256": "24c0642bff11a4e1435c004d0c2aa6c68e093fadfa35f0f0dba849ac67f25ac3"
+  },
+  {
+   "path": "model/mimi_encoder_int8.onnx",
+   "size": 20779616,
+   "sha256": "abb46f1ad0b83c3840fe38c3652ab0eda7d1d97a63f1953bbbff5d04d8f4c855"
+  },
+  {
+   "path": "model/mimi_decoder_int8.onnx",
+   "size": 22684077,
+   "sha256": "3630450a3297a101792a6ac66619ebc70ab916b265e6220c2afaef8b1673f925"
+  },
+  {
+   "path": "model/flow_lm_main_int8_dyn.onnx",
+   "size": 76179668,
+   "sha256": "f3cdb70ac61aabc517dc58e559a7d118fdc0e3ad0ebe0d7fe7304656dfb08aff"
+  }
+ ]
+}
